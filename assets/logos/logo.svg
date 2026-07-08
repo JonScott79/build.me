@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--==========================================================
+    Build.me
+    Brand Mark v3
+    Atomic Age
+===========================================================-->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260">
+
+    <!-- Orbit -->
+
+    <ellipse
+        cx="450"
+        cy="120"
+        rx="360"
+        ry="82"
+        fill="none"
+        stroke="#2A728F"
+        stroke-width="4"
+        transform="rotate(-9 450 120)"/>
+
+    <!-- Destination Planet -->
+
+    <circle
+        cx="805"
+        cy="82"
+        r="10"
+        fill="#F46B45"/>
+
+    <!-- North Star -->
+
+    <g transform="translate(112 58)">
+
+        <polygon
+            points="0,-12 3,-3 12,0 3,3 0,12 -3,3 -12,0 -3,-3"
+            fill="#E2B84D"/>
+
+    </g>
+
+    <!-- Wordmark -->
+
+	<g transform="skewX(-14)">
+
+		<text
+			x="220"
+			y="142"
+			font-family="Space Grotesk"
+			font-size="84"
+			font-weight="700">
+
+			<tspan
+				fill="#20303C"
+				letter-spacing="-3">
+				Build
+			</tspan>
+
+			<tspan
+				dx="-12"
+				fill="#F46B45"
+				letter-spacing="-3">
+				.me
+			</tspan>
+
+		</text>
+
+	</g>
+
+</svg>
