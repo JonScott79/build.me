@@ -1,10 +1,14 @@
 /*============================================================
-    Build.me
+    LANZAR
 
     File: main.css
 ============================================================*/
 
 @import url("theme.css");
+
+/*=========================
+    Reset
+=========================*/
 
 *{
     margin:0;
@@ -17,16 +21,24 @@ html{
 }
 
 body{
+    min-height:100vh;
+    overflow:hidden;
     background:var(--bg-primary);
     color:var(--text-primary);
     font-family:var(--font-body);
-    overflow:hidden;
-    min-height:100vh;
 }
 
 img{
     display:block;
     max-width:100%;
+    height:auto;
+}
+
+button{
+    border:none;
+    background:none;
+    cursor:pointer;
+    font:inherit;
 }
 
 a{
@@ -34,92 +46,98 @@ a{
     text-decoration:none;
 }
 
-button{
-    font:inherit;
-    cursor:pointer;
-    border:none;
-    background:none;
-}
-
 #app{
+    width:100%;
     min-height:100vh;
 }
-/*==============
-    background
-================*/
+
+/*=========================
+    Background
+=========================*/
 
 .background{
     position:fixed;
     inset:0;
-    z-index:-1;
-    pointer-events:none;
     overflow:hidden;
+    pointer-events:none;
+    z-index:-1;
 }
 
 .background img{
     width:100%;
     height:100%;
     object-fit:cover;
-    opacity:.10;
+    opacity:.08;
 }
 
-/*===========
+/*=========================
     Hero
-===========*/
+=========================*/
 
 .hero{
     display:grid;
-    grid-template-columns:1.1fr .9fr;
+    grid-template-columns:1.05fr .95fr;
     align-items:center;
+    width:min(1700px,94vw);
     height:100vh;
-    max-width:1500px;
     margin:auto;
-    padding:2rem 4rem;
-    gap:4rem;
+    padding:0 2vw;
+    gap:2rem;
 }
 
 .hero-left{
     display:flex;
     flex-direction:column;
     justify-content:center;
-    transform:translateY(-80px);
+    transform:translateY(-70px);
 }
 
-.logo img{
-    width:min(650px,100%);
-    margin-bottom:1.5rem;
+.hero-right{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .hero-content{
-    max-width:680px;
+    max-width:620px;
+}
+
+.logo img{
+    width:clamp(380px,30vw,540px);
+    margin-bottom:.75rem;
 }
 
 .hero h1{
     font-family:var(--font-heading);
-    font-size:clamp(4rem,7vw,6rem);
-    line-height:.95;
+    font-size:clamp(3.8rem,6vw,5.8rem);
+    line-height:.92;
     color:var(--deep-navy);
 }
 
 .hero h2{
-    margin:1rem 0 2rem;
+    margin:.5rem 0 1.25rem;
     font-family:var(--font-heading);
-    font-size:clamp(2rem,4vw,3rem);
+    font-size:clamp(2rem,2.8vw,2.9rem);
     color:var(--rocket-orange);
 }
 
 .hero p{
-    margin-bottom:2.5rem;
-    font-size:1.25rem;
-    line-height:1.8;
+    max-width:520px;
+    margin-bottom:1.75rem;
+    font-size:clamp(1rem,1.1vw,1.2rem);
+    line-height:1.65;
     color:var(--text-secondary);
 }
 
 .hero-buttons{
     display:flex;
     gap:1rem;
-    flex-wrap:wrap;
 }
+
+/*=====================
+	buttons
+=======================*/
 
 .btn-primary,
 .btn-secondary{
@@ -143,13 +161,6 @@ button{
 .btn-primary:hover,
 .btn-secondary:hover{
     transform:translateY(-5px);
-}
-
-.hero-right{
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
 }
 
 .launchpad{
@@ -225,53 +236,34 @@ button{
 }
 
 .mission-control h2{
-
     text-align:center;
-
     font-family:var(--font-heading);
-
     color:var(--deep-navy);
-
 }
 
 .mission-control p{
-
     text-align:center;
-
     margin:0;
-
 }
 
 .auth-btn{
-
     padding:1rem;
-
     border-radius:999px;
-
     font-weight:700;
-
     color:#fff;
-
     transition:.25s;
-
 }
 
 .google{
-
-    background:#4285F4;
-
+     background:#4285F4;
 }
 
 .email{
-
     background:var(--retro-teal);
-
 }
 
 .auth-btn:hover{
-
     transform:translateY(-3px);
-
 }
 
 .divider{
