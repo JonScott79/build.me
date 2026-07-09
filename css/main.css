@@ -71,11 +71,11 @@ button{
     display:grid;
     grid-template-columns:1.1fr .9fr;
     align-items:center;
-    min-height:100vh;
+    height:100vh;
     max-width:1500px;
     margin:auto;
-    padding:4rem;
-    gap:5rem;
+    padding:2rem 4rem;
+    gap:4rem;
 }
 
 .hero-left{
@@ -207,7 +207,7 @@ button{
 
 .mission-control{
     position:absolute;
-    top:40px;
+    top:0;
     right:0;
     width:520px;
     padding:2.5rem;
