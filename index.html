@@ -1,303 +1,464 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>LANZAR | Launch Bigger.</title>
 
-    <meta name="description"
-        content="Custom websites built with creativity, craftsmanship, and a genuine love for creating unforgettable experiences.">
+    <meta
+      name="description"
+      content="Custom websites built with creativity, craftsmanship, and a genuine love for creating unforgettable experiences."
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap"
-        rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="css/theme.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/animation.css" />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <div class="background">
-        <img src="assets/svg/background.svg" alt="">
+      <img src="assets/svg/background.svg" alt="" />
     </div>
 
     <main id="app">
-
-        <section class="hero">
-
-            <!-- =====================================
+      <section class="hero">
+        <!-- =====================================
                  LEFT
             ====================================== -->
 
-            <div class="hero-left">
+        <div class="hero-left">
+          <div class="logo">
+            <img src="assets/logos/logo.svg" alt="LANZAR" />
+          </div>
 
-                <div class="logo">
-                    <img src="assets/logos/logo.svg" alt="LANZAR">
-                </div>
+          <div class="hero-content">
+            <h1>Build Tomorrow.</h1>
 
-				<div class="hero-content">
+            <h2>Starting Today.</h2>
 
-					<h1>Build Tomorrow.</h1>
+            <p>Every business has a story. Your website should tell it.</p>
 
-					<h2>Starting Today.</h2>
-
-					<p>
-
-						Every business has a story.
-
-						Your website should tell it.
-
-					</p>
-
-					<div class="hero-buttons">
-
-						<button id="launch-mission" class="btn-primary">
-							Launch
-						</button>
-
-					</div>
-
-				</div>
-
+            <div class="hero-buttons">
+              <button id="launch-mission" class="btn-primary">Launch</button>
             </div>
+          </div>
+        </div>
 
-            <!-- =====================================
+        <!-- =====================================
                  RIGHT
             ====================================== -->
 
-            <div class="hero-right">
+        <div class="hero-right">
+          <div class="launchpad">
+            <div id="smoke" class="smoke">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 1400">
+                <g fill="#C8C8C8" fill-opacity=".88">
+                  <circle class="puff p1" cx="190" cy="70" r="18" />
+                  <circle class="puff p2" cx="215" cy="82" r="20" />
+                  <circle class="puff p3" cx="240" cy="96" r="18" />
 
-                <div class="launchpad">
+                  <circle class="puff p4" cx="175" cy="145" r="28" />
+                  <circle class="puff p5" cx="215" cy="160" r="32" />
+                  <circle class="puff p6" cx="260" cy="178" r="28" />
 
-                    <div id="smoke" class="smoke">
+                  <circle class="puff p7" cx="150" cy="245" r="42" />
+                  <circle class="puff p8" cx="210" cy="265" r="48" />
+                  <circle class="puff p9" cx="285" cy="290" r="44" />
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 1400">
+                  <circle class="puff p10" cx="125" cy="365" r="56" />
+                  <circle class="puff p11" cx="205" cy="390" r="64" />
+                  <circle class="puff p12" cx="305" cy="425" r="58" />
 
-                            <g fill="#C8C8C8" fill-opacity=".88">
+                  <circle class="puff p13" cx="110" cy="520" r="72" />
+                  <circle class="puff p14" cx="210" cy="555" r="82" />
+                  <circle class="puff p15" cx="335" cy="600" r="76" />
 
-                                <circle class="puff p1" cx="190" cy="70" r="18" />
-                                <circle class="puff p2" cx="215" cy="82" r="20" />
-                                <circle class="puff p3" cx="240" cy="96" r="18" />
+                  <circle class="puff p16" cx="115" cy="720" r="90" />
+                  <circle class="puff p17" cx="240" cy="760" r="102" />
+                  <circle class="puff p18" cx="395" cy="815" r="95" />
 
-                                <circle class="puff p4" cx="175" cy="145" r="28" />
-                                <circle class="puff p5" cx="215" cy="160" r="32" />
-                                <circle class="puff p6" cx="260" cy="178" r="28" />
+                  <circle class="puff p19" cx="145" cy="965" r="110" />
+                  <circle class="puff p20" cx="305" cy="1020" r="122" />
+                  <circle class="puff p21" cx="495" cy="1085" r="112" />
 
-                                <circle class="puff p7" cx="150" cy="245" r="42" />
-                                <circle class="puff p8" cx="210" cy="265" r="48" />
-                                <circle class="puff p9" cx="285" cy="290" r="44" />
+                  <circle class="puff p22" cx="185" cy="1230" r="118" />
+                  <circle class="puff p23" cx="395" cy="1295" r="130" />
+                  <circle class="puff p24" cx="615" cy="1365" r="120" />
+                </g>
+              </svg>
+            </div>
+            <img
+              class="rocket"
+              src="assets/logos/rocket.svg"
+              alt="LANZAR Rocket"
+            />
 
-                                <circle class="puff p10" cx="125" cy="365" r="56" />
-                                <circle class="puff p11" cx="205" cy="390" r="64" />
-                                <circle class="puff p12" cx="305" cy="425" r="58" />
-
-                                <circle class="puff p13" cx="110" cy="520" r="72" />
-                                <circle class="puff p14" cx="210" cy="555" r="82" />
-                                <circle class="puff p15" cx="335" cy="600" r="76" />
-
-                                <circle class="puff p16" cx="115" cy="720" r="90" />
-                                <circle class="puff p17" cx="240" cy="760" r="102" />
-                                <circle class="puff p18" cx="395" cy="815" r="95" />
-
-                                <circle class="puff p19" cx="145" cy="965" r="110" />
-                                <circle class="puff p20" cx="305" cy="1020" r="122" />
-                                <circle class="puff p21" cx="495" cy="1085" r="112" />
-
-                                <circle class="puff p22" cx="185" cy="1230" r="118" />
-                                <circle class="puff p23" cx="395" cy="1295" r="130" />
-                                <circle class="puff p24" cx="615" cy="1365" r="120" />
-
-                            </g>
-
-                        </svg>
-
-                    </div>
-					<img
-						class="rocket"
-						src="assets/logos/rocket.svg"
-						alt="LANZAR Rocket">
-
-					<div id="welcome-panel" class="welcome-panel">
-
-						<!-- ==========================
+            <div id="welcome-panel" class="welcome-panel">
+              <!-- ==========================
 							 Console View
 						=========================== -->
 
-						<div id="console-view">
+              <div id="console-view">
+                <div class="panel-top">
+                  <span class="led"></span>
 
-							<div class="panel-top">
+                  LANZAR CONTROL CONSOLE
+                </div>
 
-								<span class="led"></span>
+                <p>Where would you like to begin?</p>
 
-								LANZAR CONTROL CONSOLE
+                <div class="console-menu">
+                  <button id="btn-meet-jon" class="console-link">
+                    <span class="console-id">01</span>
 
-							</div>
+                    <span class="console-text">Meet Jon</span>
+                  </button>
 
-							<p>
-								Where would you like to begin?
-							</p>
+                  <button id="btn-services" class="console-link">
+                    <span class="console-id">02</span>
 
-							<div class="console-menu">
+                    <span class="console-text">Services</span>
+                  </button>
 
-								<button id="btn-meet-jon" class="console-link">
+                  <button id="btn-portfolio" class="console-link">
+                    <span class="console-id">03</span>
 
-									<span class="console-id">01</span>
+                    <span class="console-text">Portfolio</span>
+                  </button>
+                </div>
 
-									<span class="console-text">Meet Jon</span>
+                <div class="console-divider"></div>
 
-								</button>
+                <button id="btn-contact" class="console-launch">
+                  What Are We Building?
+                </button>
+              </div>
 
-								<button class="console-link">
-
-									<span class="console-id">02</span>
-
-									<span class="console-text">Services</span>
-
-								</button>
-
-								<button class="console-link">
-
-									<span class="console-id">03</span>
-
-									<span class="console-text">Portfolio</span>
-
-								</button>
-
-							</div>
-
-							<div class="console-divider"></div>
-
-							<button class="console-launch">
-
-								What Are We Building?
-
-							</button>
-
-						</div>
-
-						<!-- ==========================
+              <!-- ==========================
 							 Meet Jon View
 						=========================== -->
 
-						<div id="meet-view" style="display:none;">
+              <div id="meet-view" style="display: none">
+                <div class="panel-top">
+                  <span class="led"></span>
 
-							<div class="panel-top">
+                  MEET JON
+                </div>
 
-								<span class="led"></span>
+                <div class="view-content">
+                  <p class="intro">
+                    <strong
+                      >Hi, I'm Jon. Thanks for stopping by. Did ya like the
+                      rocket? =)</strong
+                    >
+                    <br /><br />
+                    I'm the father of two, husband to one, and someone who
+                    genuinely loves building websites.
 
-								MEET JON
+                    <br /><br />
 
-							</div>
+                    For me, it's the perfect mix of everything I'm passionate
+                    about—technology, creativity, psychology, economics, and
+                    just enough art to keep things interesting.
 
-							<div class="view-content">
+                    <br /><br />
 
-								<p class="intro">
+                    Most people see a website.
 
-									<strong>Hi, I'm Jon. Thanks for stopping by. Did ya like the rocket? =)</strong>
+                    <br /><br />
 
-								</p>
+                    I see a story waiting to be told.
 
-								<p>
+                    <br /><br />
+                    Every word, every click, every animation, and every decision
+                    influences how someone experiences a brand. Understanding
+                    how people think is just as important as knowing how to
+                    write code.
 
-									I'm the father of two, husband to one, and someone who genuinely loves building websites.
+                    <br /><br />
 
-								</p>
+                    That's why I don't just build websites.
 
-								<p>
+                    <br /><br />
 
-									For me, it's the perfect mix of everything I'm passionate about—technology, creativity, psychology, economics, and just enough art to keep things interesting.
+                    I build experiences.
 
-								</p>
+                    <br /><br />
 
-								<p class="statement">
+                    Every website I build raises the bar a little higher.
 
-									Most people see a website.
+                    <br /><br />
 
-								</p>
+                    I guess that's the curse of loving what you do.
 
-								<p class="statement emphasis">
+                    <br /><br />
 
-									I see a story waiting to be told.
+                    I'm always trying to build a better website.
 
-								</p>
+                    <br /><br />
 
-								<p>
+                    <strong>Maybe the next one could be yours.</strong>
+                  </p>
 
-									Every word, every click, every animation, and every decision influences how someone experiences a brand. Understanding how people think is just as important as knowing how to write code.
+                  <div class="view-nav">
+                    <button class="nav-arrow" id="back-console">←</button>
 
-								</p>
+                    <button class="nav-arrow" id="next-services">→</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Meet-View -->
 
-								<p class="statement">
+              <div id="services-view" style="display: none">
+                <div class="panel-top">
+                  <span class="led"></span>
 
-									That's why I don't just build websites.
+                  MISSION CAPABILITIES
+                </div>
 
-								</p>
+                <div class="view-content">
+                  <p class="intro">
+                    <strong
+                      >Web Design • Development • Digital Solutions</strong
+                    >
 
-								<p class="statement emphasis">
+                    <br /><br />
 
-									I build experiences.
+                    If you can dream it...
 
-								</p>
+                    <br /><br />
 
-								<p>
+                    There's a pretty good chance we can build it.
 
-									Every website I build raises the bar a little higher.
+                    <br /><br />
 
-								</p>
+                    Custom Website Design
 
-								<p>
+                    <br /><br />
 
-									I guess that's the curse of loving what you do.
+                    Beautiful, responsive websites designed around your
+                    business—not a template.
+                  </p>
 
-								</p>
+                  <p class="statement">
+                    Website Maintenance
 
-								<p>
+                    <br /><br />
 
-									I'm always trying to build a better website.
+                    Ongoing updates, content changes, backups, security, and
+                    support.
 
-								</p>
+                    <br /><br />
 
-								<p class="closing">
+                    Hourly Development
 
-									<strong>Maybe the next one could be yours.</strong>
+                    <br /><br />
 
-								</p>
-								<div class="view-nav">
+                    Need something fixed or something new? Hire us only for the
+                    time you need.
+                  </p>
 
-									<button class="nav-arrow" id="back-console">
-										←
-									</button>
+                  <p class="statement">
+                    Brand Identity
 
-									<button class="nav-arrow" id="next-services">
-										→
-									</button>
+                    <br /><br />
 
-								</div>
+                    Logos, colors, typography, and personality that make your
+                    business memorable.
+                  </p>
 
-							</div>
+                  <p class="statement emphasis">
+                    We don't just build websites.
+                  </p>
 
-						</div>
+                  <p class="closing">
+                    <strong>We give businesses a personality.</strong>
+                  </p>
 
-					</div><!-- welcome-panel -->
+                  <div class="view-nav">
+                    <button class="nav-arrow" id="back-meet">←</button>
 
-				</div><!-- launchpad -->
+                    <button class="nav-arrow" id="next-portfolio">→</button>
+                  </div>
+                </div>
+              </div>
 
-			</div><!-- hero-right -->
+              <div id="contact-view" style="display: none">
+                <div class="panel-top">
+                  <span class="led"></span>
 
-		</section><!-- hero -->
+                  READY FOR LAUNCH
+                </div>
+
+                <div class="view-content">
+                  <p class="intro">
+                    <strong>Mission Briefing Complete.</strong>
+
+                    <br /><br />
+
+                    You've seen how I think, how I design, and what I build.
+
+                    <br /><br />
+
+                    Now I'd love to hear about your mission.
+                  </p>
+
+                  <div class="console-divider"></div>
+
+                  <p class="statement">
+                    Mission
+
+                    <br /><br />
+
+                    Your Business
+
+                    <br /><br />
+
+                    Objective
+
+                    <br /><br />
+
+                    Build something unforgettable.
+
+                    <br /><br />
+
+                    Launch Window
+
+                    <br /><br />
+
+                    🟢 Open
+                  </p>
+
+                  <div class="console-divider"></div>
+
+                  <button id="btn-booking" class="console-launch">
+                    🚀 Schedule a Mission Briefing
+                  </button>
+
+                  <button
+                    class="console-link"
+                    onclick="location.href = 'mailto:jon@lanzar.me'"
+                  >
+                    <span class="console-id">✉</span>
+
+                    <span class="console-text">Send an Email Instead</span>
+                  </button>
+
+                  <div class="console-divider"></div>
+
+                  <p class="center">
+                    No pressure.
+
+                    <br />
+
+                    Let's just build something awesome.
+                  </p>
+
+                  <div class="view-nav">
+                    <button class="nav-arrow" id="back-portfolio">←</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="portfolio-view" style="display: none">
+                <div class="panel-top">
+                  <span class="led"></span>
+
+                  ACTIVE MISSIONS
+                </div>
+
+                <div class="view-content">
+                  <p class="intro">
+                    <strong>Current Launches</strong>
+                  </p>
+
+                  <p class="statement">
+                    🟡
+                    <a href="https://thermo-predict.wpi.edu" target="_blank">
+                      thermo-predict.wpi.edu
+                    </a>
+                  </p>
+
+                  <p>
+                    AI-powered chemical prediction platform developed with
+                    Worcester Polytechnic Institute.
+
+                    <br />
+
+                    <strong>Mission Status:</strong> Building
+                  </p>
+
+                  <p class="statement">
+                    🟢
+                    <a href="https://stirmycoffee.com" target="_blank">
+                      stirmycoffee.com
+                    </a>
+                  </p>
+
+                  <p>
+                    Community-powered coffee ratings helping people find
+                    consistently great coffee.
+
+                    <br />
+
+                    <strong>Mission Status:</strong> Live
+                  </p>
+
+                  <p class="statement">
+                    🟢
+                    <a href="https://homenethudson.com" target="_blank">
+                      homenethudson.com
+                    </a>
+                  </p>
+
+                  <p>
+                    Technology support, web design, and digital services for
+                    homes and small businesses.
+
+                    <br />
+
+                    <strong>Mission Status:</strong> Live
+                  </p>
+
+                  <p class="statement">
+                    🚀
+                    <a href="https://lanzar.me" target="_blank"> lanzar.me </a>
+                  </p>
+                  <p>
+                    You're looking at it. Custom web design with personality,
+                    creativity, and just enough rocket fuel.
+
+                    <br />
+
+                    <strong>Mission Status:</strong> Current Mission
+                  </p>
+
+                  <div class="view-nav">
+                    <button class="nav-arrow" id="back-services">←</button>
+
+                    <button class="nav-arrow" id="next-contact">→</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- welcome-panel -->
+          </div>
+          <!-- launchpad -->
+        </div>
+        <!-- hero-right -->
+      </section>
+      <!-- hero -->
     </main>
 
     <script type="module" src="js/app.js"></script>
-
-</body>
-
+  </body>
 </html>

@@ -8,117 +8,144 @@
     Rocket
 ===========*/
 
-.rocket.launch{
-    animation:rocket-launch 1.6s cubic-bezier(.2,.85,.2,1) forwards;
+.rocket.launch {
+  animation: rocket-launch 1.6s cubic-bezier(0.2, 0.85, 0.2, 1) forwards;
 }
 
-@keyframes rocket-launch{
+@keyframes rocket-launch {
+  0% {
+    transform: rotate(-18deg) translate(0, 0) scale(1);
+    opacity: 1;
+  }
 
-    0%{
-        transform:
-            rotate(-18deg)
-            translate(0,0)
-            scale(1);
-        opacity:1;
-    }
+  8% {
+    transform: rotate(-18deg) translate(0, 12px) scale(1);
+  }
 
-    8%{
-        transform:
-            rotate(-18deg)
-            translate(0,12px)
-            scale(1);
-    }
+  15% {
+    transform: rotate(-19deg) translate(4px, -20px) scale(1);
+  }
 
-    15%{
-        transform:
-            rotate(-19deg)
-            translate(4px,-20px)
-            scale(1);
-    }
-
-    100%{
-        transform:
-            rotate(-18deg)
-            translate(250px,-1600px)
-            scale(.85);
-        opacity:0;
-    }
-
+  100% {
+    transform: rotate(-18deg) translate(250px, -1600px) scale(0.85);
+    opacity: 0;
+  }
 }
 
 /*===========
     Smoke
 ===========*/
 
-.smoke{
-    opacity:1;
+.smoke {
+  opacity: 1;
 }
 
-.puff{
-    opacity:0;
-    transform-origin:center;
-    transform-box:fill-box;
+.puff {
+  opacity: 0;
+  transform-origin: center;
+  transform-box: fill-box;
 }
 
-.smoke.show .puff{
-    animation:puff .45s ease-out forwards;
+.smoke.show .puff {
+  animation: puff 0.45s ease-out forwards;
 }
 
-.p1{animation-delay:0ms;}
-.p2{animation-delay:30ms;}
-.p3{animation-delay:60ms;}
-.p4{animation-delay:90ms;}
-.p5{animation-delay:120ms;}
-.p6{animation-delay:150ms;}
-.p7{animation-delay:180ms;}
-.p8{animation-delay:210ms;}
-.p9{animation-delay:240ms;}
-.p10{animation-delay:270ms;}
-.p11{animation-delay:300ms;}
-.p12{animation-delay:330ms;}
-.p13{animation-delay:360ms;}
-.p14{animation-delay:390ms;}
-.p15{animation-delay:420ms;}
-.p16{animation-delay:450ms;}
-.p17{animation-delay:480ms;}
-.p18{animation-delay:510ms;}
-.p19{animation-delay:540ms;}
-.p20{animation-delay:570ms;}
-.p21{animation-delay:600ms;}
-.p22{animation-delay:630ms;}
-.p23{animation-delay:660ms;}
-.p24{animation-delay:690ms;}
-
-@keyframes puff{
-
-    0%{
-        opacity:0;
-        transform:scale(.05);
-    }
-
-    35%{
-        opacity:.95;
-    }
-
-    100%{
-        opacity:.88;
-        transform:scale(1);
-    }
-
+.p1 {
+  animation-delay: 0ms;
+}
+.p2 {
+  animation-delay: 30ms;
+}
+.p3 {
+  animation-delay: 60ms;
+}
+.p4 {
+  animation-delay: 90ms;
+}
+.p5 {
+  animation-delay: 120ms;
+}
+.p6 {
+  animation-delay: 150ms;
+}
+.p7 {
+  animation-delay: 180ms;
+}
+.p8 {
+  animation-delay: 210ms;
+}
+.p9 {
+  animation-delay: 240ms;
+}
+.p10 {
+  animation-delay: 270ms;
+}
+.p11 {
+  animation-delay: 300ms;
+}
+.p12 {
+  animation-delay: 330ms;
+}
+.p13 {
+  animation-delay: 360ms;
+}
+.p14 {
+  animation-delay: 390ms;
+}
+.p15 {
+  animation-delay: 420ms;
+}
+.p16 {
+  animation-delay: 450ms;
+}
+.p17 {
+  animation-delay: 480ms;
+}
+.p18 {
+  animation-delay: 510ms;
+}
+.p19 {
+  animation-delay: 540ms;
+}
+.p20 {
+  animation-delay: 570ms;
+}
+.p21 {
+  animation-delay: 600ms;
+}
+.p22 {
+  animation-delay: 630ms;
+}
+.p23 {
+  animation-delay: 660ms;
+}
+.p24 {
+  animation-delay: 690ms;
 }
 
-@keyframes blink{
+@keyframes puff {
+  0% {
+    opacity: 0;
+    transform: scale(0.05);
+  }
 
-    0%,100%{
+  35% {
+    opacity: 0.95;
+  }
 
-        opacity:1;
+  100% {
+    opacity: 0.88;
+    transform: scale(1);
+  }
+}
 
-    }
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
 
-    50%{
-
-        opacity:.35;
-
-    }
-
+  50% {
+    opacity: 0.35;
+  }
 }

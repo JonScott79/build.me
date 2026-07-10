@@ -4,90 +4,85 @@
    ========================================================== */
 
 :root {
-
-    /* ==========================
+  /* ==========================
        Brand Colors
        ========================== */
 
-    --cream: #F7F2E8;
-    --retro-teal: #2A728F;
-    --rocket-orange: #F46B45;
-    --atomic-gold: #E2B84D;
-    --deep-navy: #20303C;
-    --soft-gray: #6D7B83;
+  --cream: #f7f2e8;
+  --retro-teal: #2a728f;
+  --rocket-orange: #f46b45;
+  --atomic-gold: #e2b84d;
+  --deep-navy: #20303c;
+  --soft-gray: #6d7b83;
 
-    /* ==========================
+  /* ==========================
        Backgrounds
        ========================== */
 
-    --bg-primary: var(--cream);
-    --bg-secondary: #FFFDF8;
-    --bg-dark: var(--deep-navy);
+  --bg-primary: var(--cream);
+  --bg-secondary: #fffdf8;
+  --bg-dark: var(--deep-navy);
 
-    /* ==========================
+  /* ==========================
        Text
        ========================== */
 
-    --text-primary: #2A2A2A;
-    --text-secondary: #555555;
-    --text-light: #FFFFFF;
+  --text-primary: #2a2a2a;
+  --text-secondary: #555555;
+  --text-light: #ffffff;
 
-    /* ==========================
+  /* ==========================
        Buttons
        ========================== */
 
-    --btn-primary: var(--rocket-orange);
-    --btn-primary-hover: #D95737;
+  --btn-primary: var(--rocket-orange);
+  --btn-primary-hover: #d95737;
 
-    --btn-secondary: var(--retro-teal);
-    --btn-secondary-hover: #225E75;
+  --btn-secondary: var(--retro-teal);
+  --btn-secondary-hover: #225e75;
 
-    --btn-gold: var(--atomic-gold);
+  --btn-gold: var(--atomic-gold);
 
-    /* ==========================
+  /* ==========================
        Borders
        ========================== */
 
-    --border-light: rgba(0,0,0,.08);
-    --border-medium: rgba(0,0,0,.15);
+  --border-light: rgba(0, 0, 0, 0.08);
+  --border-medium: rgba(0, 0, 0, 0.15);
 
-    /* ==========================
+  /* ==========================
        Shadows
        ========================== */
 
-    --shadow-small:
-        0 3px 8px rgba(0,0,0,.08);
+  --shadow-small: 0 3px 8px rgba(0, 0, 0, 0.08);
 
-    --shadow-medium:
-        0 8px 24px rgba(0,0,0,.12);
+  --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
 
-    --shadow-large:
-        0 18px 45px rgba(0,0,0,.18);
+  --shadow-large: 0 18px 45px rgba(0, 0, 0, 0.18);
 
-    /* ==========================
+  /* ==========================
        Border Radius
        ========================== */
 
-    --radius-sm: 8px;
-    --radius-md: 16px;
-    --radius-lg: 24px;
-    --radius-xl: 36px;
-    --radius-pill: 999px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 36px;
+  --radius-pill: 999px;
 
-    /* ==========================
+  /* ==========================
        Animation
        ========================== */
 
-    --speed-fast: .15s;
-    --speed-normal: .30s;
-    --speed-slow: .60s;
+  --speed-fast: 0.15s;
+  --speed-normal: 0.3s;
+  --speed-slow: 0.6s;
 
-    /* ==========================
+  /* ==========================
        Fonts
        ========================== */
 
-    --font-heading: "Space Grotesk", sans-serif;
-    --font-body: "Inter", sans-serif;
-    --font-code: "JetBrains Mono", monospace;
-
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-code: "JetBrains Mono", monospace;
 }
