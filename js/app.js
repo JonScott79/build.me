@@ -4,16 +4,17 @@
     File: app.js
 ============================================================*/
 
-import { loginWithGoogle } from "./firebase/auth.js";
-import { userExists } from "./firebase/firestore.js";
-
 console.log("🚀 LANZAR Initialized");
 
 const rocket=document.querySelector(".rocket");
 const smoke=document.querySelector("#smoke");
 const launchButton=document.querySelector("#launch-mission");
-const missionControl=document.querySelector("#mission-control");
-const googleButton=document.querySelector("#google-login");
+const welcome=document.querySelector("#welcome-panel");
+
+const consoleView=document.querySelector("#console-view");
+const meetView=document.querySelector("#meet-view");
+const btnMeetJon=document.querySelector("#btn-meet-jon");
+const backConsole=document.querySelector("#back-console");
 
 launchButton.addEventListener("click",()=>{
 
@@ -29,42 +30,26 @@ launchButton.addEventListener("click",()=>{
 
     setTimeout(()=>{
 
-        missionControl.classList.add("show");
+        welcome.classList.add("show");
 
-    },950);
+    },900);
 
 });
 
-googleButton.addEventListener("click",async()=>{
+btnMeetJon.addEventListener("click",(e)=>{
 
-    try{
+    e.preventDefault();
 
-        const user=await loginWithGoogle();
+    consoleView.style.display="none";
 
-        console.log(user);
+    meetView.style.display="block";
 
-        const exists=await userExists(user.uid);
+});
 
-        if(exists){
+backConsole.addEventListener("click",()=>{
 
-            window.location.href="pages/dashboard.html";
+    meetView.style.display="none";
 
-        }
-
-        else{
-
-            window.location.href="mission-control.html";
-
-        }
-
-    }
-
-    catch(error){
-
-        console.error(error);
-
-        alert(error.message);
-
-    }
+    consoleView.style.display="block";
 
 });
