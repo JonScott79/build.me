@@ -639,3 +639,33 @@ section {
 .view-content a:hover {
   text-decoration: underline;
 }
+
+/*==================================================
+    Email Button
+==================================================*/
+
+.email-link{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:.5rem;
+
+    width:100%;
+
+    padding:1rem 0;
+
+}
+
+.email-link .console-id{
+
+    width:auto;
+    opacity:1;
+
+}
+
+.email-link .console-text{
+
+    flex:none;
+
+}
