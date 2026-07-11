@@ -22,7 +22,8 @@ html {
 
 body {
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
@@ -188,21 +189,37 @@ a {
 
 .launchpad {
   position: relative;
-  width: 600px;
-  height: 650px;
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 1 / 1.1;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .smoke {
   position: absolute;
-  width: 550px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  aspect-ratio: 1 / 2;
   opacity: 0;
   pointer-events: none;
   z-index: 1;
 }
 
+.smoke svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .rocket {
   position: relative;
-  width: min(420px, 90%);
+  width: min(380px, 85%);
   transform: rotate(-18deg);
   filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.18));
   z-index: 2;
@@ -212,7 +229,9 @@ a {
   .hero {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 3rem;
+    gap: 2rem;
+    padding: 3rem 1rem 2rem;
+    min-height: auto;
   }
 
   .hero-left {
@@ -228,8 +247,7 @@ a {
   }
 
   .rocket {
-    width: min(320px, 70vw);
-    transform: none;
+    width: min(280px, 60vw);
   }
 }
 
@@ -300,58 +318,39 @@ section {
 
 .welcome-panel {
   position: absolute;
-
-  left: 0;
-
+  left: 50%;
   top: 50%;
-
-  width: 420px;
+  width: 92%;
+  max-width: 420px;
   height: 500px;
-
-  transform: translateY(-50%) translateX(40px);
-
+  transform: translate(-50%, -50%) scale(0.9) translateY(20px);
   opacity: 0;
-
   background: #f8f3e9;
-
   border: 2px solid rgba(42, 114, 143, 0.1);
-
   border-radius: 24px;
-
   overflow: hidden;
-
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
-
-  transition: 0.6s;
-
+  transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.6s ease;
   z-index: 10;
 }
 
 .welcome-panel.show {
   opacity: 1;
-
-  transform: translateY(-50%) translateX(0);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .panel-top {
   display: flex;
-
   align-items: center;
-
   gap: 0.75rem;
-
-  padding: 1rem 1.5rem;
-
+  padding: 1rem 1.75rem;
   background: #f1ebdf;
-
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-
   color: var(--retro-teal);
-
   font-size: 0.75rem;
-
   font-weight: 700;
-
   letter-spacing: 0.22em;
 }
 
@@ -369,21 +368,14 @@ section {
   animation: blink 2s infinite;
 }
 
-.welcome-panel p {
+#console-view p {
   padding: 2rem 1.75rem 1.5rem;
-
   margin: 0;
-
   font-family: var(--font-heading);
-
   font-size: 1.35rem;
-
   font-weight: 600;
-
   line-height: 1.4;
-
   letter-spacing: 0.02em;
-
   color: var(--deep-navy);
 }
 
@@ -553,43 +545,62 @@ section {
 }
 
 .view-content {
-  height: 370px;
-  overflow-y: auto;
-  padding-right: 0.5rem;
+    max-height: 370px;
+    overflow-y: auto;
+    padding: 1.5rem 1.75rem;
+	scrollbar-gutter: stable;
+}
+
+/* Custom Scrollbar for View Content */
+.view-content::-webkit-scrollbar {
+  width: 6px;
+}
+.view-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.view-content::-webkit-scrollbar-thumb {
+  background: rgba(42, 114, 143, 0.15);
+  border-radius: 999px;
+}
+.view-content::-webkit-scrollbar-thumb:hover {
+  background: var(--retro-teal);
 }
 
 .view-content p {
-  margin: 0;
-  font-size: 0.92rem;
-  line-height: 1.1;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.view-content p:last-child {
+  margin-bottom: 0;
 }
 
 .intro {
-  font-size: 1rem;
+  font-size: 1.02rem;
+  color: var(--deep-navy) !important;
 }
 
 .statement {
-  margin: 0.5rem 0 0;
-
-  font-size: 1rem;
-
+  margin: 1rem 0 0.5rem;
+  font-size: 1.05rem;
   font-weight: 700;
-
   text-align: left;
+  color: var(--deep-navy);
 }
 
 .emphasis {
   color: var(--rocket-orange);
-
   font-weight: 700;
 }
 
 .closing {
-  margin-top: 0.75rem;
-
-  font-size: 1rem;
-
+  margin-top: 1rem;
+  font-size: 1.02rem;
   text-align: left;
+  color: var(--deep-navy);
 }
 
 .view-nav {
@@ -623,9 +634,7 @@ section {
 }
 
 #meet-view {
-  max-height: 560px;
-
-  overflow-y: auto;
+  height: 100%;
 }
 
 .view-content a {
@@ -644,28 +653,22 @@ section {
     Email Button
 ==================================================*/
 
-.email-link{
+.email-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:.5rem;
+  width: 100%;
 
-    width:100%;
-
-    padding:1rem 0;
-
+  padding: 1rem 0;
 }
 
-.email-link .console-id{
-
-    width:auto;
-    opacity:1;
-
+.email-link .console-id {
+  width: auto;
+  opacity: 1;
 }
 
-.email-link .console-text{
-
-    flex:none;
-
+.email-link .console-text {
+  flex: none;
 }
