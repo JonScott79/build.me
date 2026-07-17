@@ -24,9 +24,6 @@ const meetView = document.querySelector("#meet-view");
 const servicesView = document.querySelector("#services-view");
 const portfolioView = document.querySelector("#portfolio-view");
 const contactView = document.querySelector("#contact-view");
-const btnContact = document.querySelector("#btn-contact");
-const nextContact = document.querySelector("#next-contact");
-const backPortfolio = document.querySelector("#back-portfolio");
 
 /*============================================================
     Menu Buttons
@@ -35,18 +32,28 @@ const backPortfolio = document.querySelector("#back-portfolio");
 const btnMeetJon = document.querySelector("#btn-meet-jon");
 const btnServices = document.querySelector("#btn-services");
 const btnPortfolio = document.querySelector("#btn-portfolio");
+const btnContact = document.querySelector("#btn-contact");
 const btnBooking = document.querySelector("#btn-booking");
 
 /*============================================================
-    Navigation Buttons
+    View Helpers
 ============================================================*/
 
-const backConsole = document.querySelector("#back-console");
-const backMeet = document.querySelector("#back-meet");
-const backServices = document.querySelector("#back-services");
+function showView(view) {
+  [
+    consoleView,
+    meetView,
+    servicesView,
+    portfolioView,
+    contactView,
+  ].forEach((v) => (v.style.display = "none"));
 
-const nextServices = document.querySelector("#next-services");
-const nextPortfolio = document.querySelector("#next-portfolio");
+  view.style.display = "block";
+}
+
+function returnToConsole() {
+  showView(consoleView);
+}
 
 /*============================================================
     Launch
@@ -70,83 +77,26 @@ launchButton.addEventListener("click", () => {
     Console Menu
 ============================================================*/
 
-btnMeetJon.addEventListener("click", (e) => {
-  e.preventDefault();
+btnMeetJon.addEventListener("click", () => showView(meetView));
 
-  consoleView.style.display = "none";
-  meetView.style.display = "block";
-});
+btnServices.addEventListener("click", () => showView(servicesView));
 
-btnServices.addEventListener("click", (e) => {
-  e.preventDefault();
+btnPortfolio.addEventListener("click", () => showView(portfolioView));
 
-  consoleView.style.display = "none";
-  servicesView.style.display = "block";
-});
-
-btnPortfolio.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  consoleView.style.display = "none";
-  portfolioView.style.display = "block";
-});
+btnContact.addEventListener("click", () => showView(contactView));
 
 /*============================================================
-    Meet Jon
+    Panel Close Buttons
 ============================================================*/
 
-backConsole.addEventListener("click", () => {
-  meetView.style.display = "none";
-  consoleView.style.display = "block";
+document.querySelectorAll(".panel-close").forEach((button) => {
+  button.addEventListener("click", returnToConsole);
 });
 
-nextServices.addEventListener("click", () => {
-  meetView.style.display = "none";
-  servicesView.style.display = "block";
-});
-
-/*============================================================
-    Services
-============================================================*/
-
-backMeet.addEventListener("click", () => {
-  servicesView.style.display = "none";
-  meetView.style.display = "block";
-});
-
-nextPortfolio.addEventListener("click", () => {
-  servicesView.style.display = "none";
-  portfolioView.style.display = "block";
-});
-
-/*============================================================
-    Portfolio
-============================================================*/
-
-backServices.addEventListener("click", () => {
-  portfolioView.style.display = "none";
-  servicesView.style.display = "block";
-});
-
-/*============================================================
-    Contact
-============================================================*/
-
-btnContact.addEventListener("click", () => {
-  consoleView.style.display = "none";
-  contactView.style.display = "block";
-});
-
-nextContact.addEventListener("click", () => {
-  portfolioView.style.display = "none";
-
-  contactView.style.display = "block";
-});
-
-backPortfolio.addEventListener("click", () => {
-  contactView.style.display = "none";
-
-  portfolioView.style.display = "block";
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && consoleView.style.display === "none") {
+    returnToConsole();
+  }
 });
 
 /*============================================================
@@ -154,5 +104,8 @@ backPortfolio.addEventListener("click", () => {
 ============================================================*/
 
 btnBooking.addEventListener("click", () => {
-  window.open("https://lanzar.zohobookings.com/lanzar/#/lanzar", "_blank");
+  window.open(
+    "https://lanzar.zohobookings.com/lanzar/#/lanzar",
+    "_blank"
+  );
 });
