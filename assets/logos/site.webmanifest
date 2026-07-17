@@ -1,0 +1,21 @@
+{
+  "name": "LANZAR",
+  "short_name": "LANZAR",
+  "description": "Custom Web Design, Development & Digital Solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f2e8",
+  "theme_color": "#F46B45",
+  "icons": [
+    {
+      "src": "/assets/logos/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logos/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
