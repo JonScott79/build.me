@@ -493,10 +493,10 @@ section {
 }
 
 .console-divider {
-  width: 55%;
-  margin: 2rem auto;
-
-  border-top: 2px solid rgba(42, 114, 143, 0.15);
+    width: 250px;
+    height: 1px;
+    margin: 1.5rem auto;
+    background: rgba(60, 110, 140, 0.18);
 }
 
 .console-launch {
@@ -723,7 +723,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-
+  border-bottom: none !important;
   width: 100%;
 
   padding: 1rem 0;

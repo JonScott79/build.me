@@ -23,6 +23,7 @@ const consoleView = document.querySelector("#console-view");
 const meetView = document.querySelector("#meet-view");
 const servicesView = document.querySelector("#services-view");
 const portfolioView = document.querySelector("#portfolio-view");
+const pricingView = document.querySelector("#pricing-view");
 const contactView = document.querySelector("#contact-view");
 
 /*============================================================
@@ -32,6 +33,7 @@ const contactView = document.querySelector("#contact-view");
 const btnMeetJon = document.querySelector("#btn-meet-jon");
 const btnServices = document.querySelector("#btn-services");
 const btnPortfolio = document.querySelector("#btn-portfolio");
+const btnPricing = document.querySelector("#btn-pricing");
 const btnContact = document.querySelector("#btn-contact");
 const btnBooking = document.querySelector("#btn-booking");
 
@@ -45,6 +47,7 @@ function showView(view) {
     meetView,
     servicesView,
     portfolioView,
+    pricingView,
     contactView,
   ].forEach((v) => (v.style.display = "none"));
 
@@ -82,6 +85,8 @@ btnMeetJon.addEventListener("click", () => showView(meetView));
 btnServices.addEventListener("click", () => showView(servicesView));
 
 btnPortfolio.addEventListener("click", () => showView(portfolioView));
+
+btnPricing.addEventListener("click", () => showView(pricingView));
 
 btnContact.addEventListener("click", () => showView(contactView));
 
