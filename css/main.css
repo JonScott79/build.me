@@ -80,7 +80,7 @@ a {
   grid-template-columns: 1.05fr 0.95fr;
   align-items: center;
   width: min(1700px, 94vw);
-  min-height: 100vh;
+  min-height: calc(100vh - 4rem);
   padding: 2rem 2vw;
   margin: auto;
   gap: 2rem;
