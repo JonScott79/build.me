@@ -210,6 +210,20 @@ a {
   opacity: 0.8;
 }
 
+.cta-button.phone {
+    display: block;
+    width: fit-content;
+    margin: 1rem auto 0;
+    color: var(--accent);
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity .2s ease;
+}
+
+.cta-button.phone:hover {
+    opacity: .8;
+}
+
 /*==================
 	rocket 
 ===================*/
@@ -816,3 +830,6 @@ section {
 .current {
     background:#FFE6DD;
 }
+
+
+
