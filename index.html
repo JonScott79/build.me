@@ -4,24 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>LANZAR | Custom Web Design, Webstites & Development | Hudson, MA</title>
+	<title>LANZAR | Custom Web Design & Development | Hudson, MA</title>
 
 	<!-- SEO -->
-	<meta name="description" content="Custom web design, website development, branding, and maintenance from Hudson, MA. We build memorable websites with personality because your business deserves better than another cookie-cutter template.">
+	<meta name="description" content="LANZAR provides custom web design, website development, branding, and digital solutions from Hudson, MA. We build memorable websites with personality for businesses throughout the United States.">
 	<meta name="theme-color" content="#F46B45">
+	<meta name="author" content="Jon Scott">
+	<meta name="robots" content="index, follow">
 
+	<!-- Open Graph -->
+	<meta property="og:title" content="LANZAR | Custom Web Design & Development">
+	<meta property="og:description" content="LANZAR creates custom websites, digital experiences, and solutions for businesses throughout the United States. Websites worth remembering.">
+	<meta property="og:url" content="https://lanzar.me">
+	<meta property="og:type" content="website">
 	<meta property="og:image" content="https://lanzar.me/assets/images/social-card.png">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 	<meta property="og:image:type" content="image/jpeg">
 	<meta property="og:image:alt" content="LANZAR - Custom Web Design & Development">
+	<meta property="og:site_name" content="LANZAR">
 	
 	<!-- Twitter/X -->
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="LANZAR"> 
-	<meta name="twitter:description" content="Creative websites with personality.">
-	<meta name="twitter:image" content="https://lanzar.me/assets/images/social-card.png">
-   
+	<meta name="twitter:title" content="LANZAR | Custom Web Design & Development">
+	<meta name="twitter:description" content="Websites worth remembering. Custom design, development, branding, and digital solutions for businesses.">
+	<meta name="twitter:image" content="https://lanzar.me/assets/images/social-card.png"> 
+	
 	<!-- Canonical -->
     <link rel="canonical" href="https://lanzar.me">
 	
@@ -44,6 +52,10 @@
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/animation.css" />
+	
+	<link rel="preload" href="assets/logos/logo.svg" as="image">
+	<link rel="preload" href="assets/logos/rocket.svg" as="image">
+	<link rel="preload" href="assets/images/social-card.png" as="image">
 	
 	<!-- Clarity -->
 	<script type="text/javascript">
@@ -72,25 +84,74 @@
 	<!-- JSON-LD/Structured Data -->
 	<script type="application/ld+json">
 	{
-	  "@context": "https://schema.org",
-	  "@type": "WebDesignCompany",
-	  "name": "LANZAR",
-	  "url": "https://lanzar.me",
-	  "logo": "https://lanzar.me/assets/logos/logo.svg",
-	  "image": "https://lanzar.me/assets/images/social-card.png",
-	  "description": "Custom web design, website development, branding, and digital solutions for businesses.",
-	  "email": "jon@lanzar.me",
-	  "founder": {
-		"@type": "Person",
-		"name": "Jon Scott"
-	  },
-	  "areaServed": {
-		"@type": "State",
-		"name": "Massachusetts"
-	  },
-	  "sameAs": [
-		"https://github.com/yourgithub"
-	  ]
+		"@context":"https://schema.org",
+		"@type":"ProfessionalService",
+
+		"name":"LANZAR",
+
+		"url":"https://lanzar.me",
+
+		"logo":"https://lanzar.me/assets/logos/logo.svg",
+
+		"image":"https://lanzar.me/assets/images/social-card.png",
+
+		"description":"Custom web design, website development, branding, and digital solutions for businesses.",
+
+		"email":"jon@lanzar.me",
+
+		"telephone":"+15085718819",
+		"priceRange":"$$",
+		"founder":{
+			"@type":"Person",
+			"name":"Jon Scott"
+		},
+		
+		"location":{
+			"@type":"Place",
+			"name":"Hudson, Massachusetts"
+		},
+
+		"areaServed":{
+			"@type":"Country",
+			"name":"United States"
+		},
+
+		"sameAs":[
+			"https://github.com/JonScott79"
+		],
+
+		"hasOfferCatalog":{
+			"@type":"OfferCatalog",
+			"name":"LANZAR Services",
+
+			"itemListElement":[
+
+				{
+					"@type":"Offer",
+					"itemOffered":{
+						"@type":"Service",
+						"name":"Custom Website Design"
+					}
+				},
+
+				{
+					"@type":"Offer",
+					"itemOffered":{
+						"@type":"Service",
+						"name":"Web Development"
+					}
+				},
+
+				{
+					"@type":"Offer",
+					"itemOffered":{
+						"@type":"Service",
+						"name":"Digital Solutions"
+					}
+				}
+
+			]
+		}
 	}
 	</script>
   </head>
