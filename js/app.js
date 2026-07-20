@@ -36,6 +36,7 @@ const btnPortfolio = document.querySelector("#btn-portfolio");
 const btnPricing = document.querySelector("#btn-pricing");
 const btnContact = document.querySelector("#btn-contact");
 const btnBooking = document.querySelector("#btn-booking");
+const btnJournal = document.querySelector("#btn-journal");
 
 /*============================================================
     View Helpers
@@ -87,6 +88,16 @@ btnServices.addEventListener("click", () => showView(servicesView));
 btnPortfolio.addEventListener("click", () => showView(portfolioView));
 
 btnPricing.addEventListener("click", () => showView(pricingView));
+
+btnContact.addEventListener("click", () => showView(contactView));
+
+btnPricing.addEventListener("click", () => showView(pricingView));
+
+btnJournal.addEventListener("click", () => {
+
+    window.location.href = "blog.html";
+
+});
 
 btnContact.addEventListener("click", () => showView(contactView));
 
