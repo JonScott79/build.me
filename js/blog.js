@@ -15,6 +15,7 @@ const blogs = [
     "blog/public-built.html",
     "blog/origin.html",
     "blog/digital-frontier.html",
+	"blog/catting-code.html",
 ];
 
 
