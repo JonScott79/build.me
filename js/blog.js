@@ -97,9 +97,7 @@ function setupControls() {
   });
 
   home.addEventListener("click", () => {
-    currentBlog = 0;
-
-    window.location.hash = getSlug(blogs[currentBlog]);
+    window.location.href = "index.html";
   });
 
   next.addEventListener("click", () => {
