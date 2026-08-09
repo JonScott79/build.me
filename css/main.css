@@ -29,11 +29,17 @@ html {
 
 body {
   min-height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   background: var(--bg-primary);
   color: var(--text-primary);
   font-family: var(--font-body);
+}
+
+@media (max-width: 960px), (max-height: 750px) {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
 }
 
 img {
@@ -218,17 +224,17 @@ a {
 }
 
 .cta-button.phone {
-    display: block;
-    width: fit-content;
-    margin: 1rem auto 0;
-    color: var(--accent);
-    font-weight: 700;
-    text-decoration: none;
-    transition: opacity .2s ease;
+  display: block;
+  width: fit-content;
+  margin: 1rem auto 0;
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 .cta-button.phone:hover {
-    opacity: .8;
+  opacity: 0.8;
 }
 
 /*==================
@@ -236,14 +242,14 @@ a {
 ===================*/
 
 .launchpad {
-    position: relative;
-    width: 100%;
-    max-width: 500px;
-    height: 620px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 620px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .smoke {
@@ -365,39 +371,37 @@ section {
 ==================================================*/
 
 .welcome-panel {
+  position: absolute;
 
-    position:absolute;
+  left: 50%;
 
-    left:50%;
+  top: 50%;
 
-    top:50%;
+  width: 92%;
 
-    width:92%;
+  max-width: 440px;
 
-    max-width:440px;
+  height: 560px;
 
-    height:560px;
+  transform: translate(-50%, -50%) scale(0.9) translateY(20px);
 
-    transform:translate(-50%,-50%) scale(.9) translateY(20px);
+  opacity: 0;
 
-    opacity:0;
+  background: #f8f3e9;
 
-    background:#f8f3e9;
+  border: 2px solid rgba(42, 114, 143, 0.1);
 
-    border:2px solid rgba(42,114,143,.1);
+  border-radius: 24px;
 
-    border-radius:24px;
+  overflow: hidden;
 
-    overflow:hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
 
-    box-shadow:0 18px 40px rgba(0,0,0,.15);
+  transition:
+    transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.6s ease;
 
-    transition:
-        transform .6s cubic-bezier(.34,1.56,.64,1),
-        opacity .6s ease;
-
-    z-index:10;
-
+  z-index: 10;
 }
 
 .welcome-panel.show {
@@ -496,7 +500,7 @@ section {
 
   align-items: center;
 
-  padding:.85rem 0;
+  padding: 0.85rem 0;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 
@@ -530,16 +534,16 @@ section {
 }
 
 .console-divider {
-    width: 250px;
-    height: 1px;
-    margin: 1.5rem auto;
-    background: rgba(60, 110, 140, 0.18);
+  width: 250px;
+  height: 1px;
+  margin: 1.5rem auto;
+  background: rgba(60, 110, 140, 0.18);
 }
 
 .console-launch {
   width: calc(100% - 3.5rem);
 
-  margin:0 1.75rem 2rem;
+  margin: 0 1.75rem 2rem;
 
   padding: 1rem;
 
@@ -647,10 +651,10 @@ section {
 }
 
 .view-content {
-    max-height: 370px;
-    overflow-y: auto;
-    padding: 1.5rem 1.75rem;
-	scrollbar-gutter: stable;
+  max-height: 370px;
+  overflow-y: auto;
+  padding: 1.5rem 1.75rem;
+  scrollbar-gutter: stable;
 }
 
 /* Custom Scrollbar for View Content */
@@ -780,76 +784,76 @@ section {
 ==================================================*/
 
 .mission-card {
-    margin: 1rem 0;
-    padding: 1rem 1.1rem;
+  margin: 1rem 0;
+  padding: 1rem 1.1rem;
 
-    background: #f4efe4;
+  background: #f4efe4;
 
-    border: 1px solid rgba(42,114,143,.12);
+  border: 1px solid rgba(42, 114, 143, 0.12);
 
-    border-left: 5px solid var(--retro-teal);
+  border-left: 5px solid var(--retro-teal);
 
-    border-radius: 14px;
+  border-radius: 14px;
 
-    transition: .25s ease;
+  transition: 0.25s ease;
 }
 
 .mission-card:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 
-    box-shadow: 0 10px 22px rgba(0,0,0,.08);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
 
 .mission-card.current {
-    border-left-color: var(--rocket-orange);
+  border-left-color: var(--rocket-orange);
 }
 
 .mission-header {
-    display:flex;
+  display: flex;
 
-    justify-content:space-between;
+  justify-content: space-between;
 
-    align-items:center;
+  align-items: center;
 
-    margin-bottom:.75rem;
+  margin-bottom: 0.75rem;
 
-    gap:1rem;
+  gap: 1rem;
 
-    flex-wrap:wrap;
+  flex-wrap: wrap;
 }
 
 .mission-header a {
-    font-weight:700;
+  font-weight: 700;
 
-    color:var(--deep-navy);
+  color: var(--deep-navy);
 
-    text-decoration:none;
+  text-decoration: none;
 }
 
 .mission-header a:hover {
-    color:var(--rocket-orange);
+  color: var(--rocket-orange);
 }
 
 .mission-status {
-    padding:.3rem .7rem;
+  padding: 0.3rem 0.7rem;
 
-    border-radius:999px;
+  border-radius: 999px;
 
-    font-size:.72rem;
+  font-size: 0.72rem;
 
-    font-weight:700;
+  font-weight: 700;
 
-    letter-spacing:.08em;
+  letter-spacing: 0.08em;
 }
 
 .building {
-    background:#FFF6D8;
+  background: #fff6d8;
 }
 
 .live {
-    background:#E4F8E7;
+  background: #e4f8e7;
 }
 
 .current {
-    background:#FFE6DD;
+  background: #ffe6dd;
 }
