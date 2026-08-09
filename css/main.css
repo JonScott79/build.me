@@ -870,19 +870,19 @@ section {
     margin-bottom: 0.5rem;
   }
   .launchpad {
-    height: 500px;
+    height: 510px;
   }
   .rocket {
-    width: min(300px, 80%);
+    width: min(290px, 75%);
   }
   .welcome-panel {
-    height: 440px;
-  }
-  .view-content {
-    max-height: 260px;
+    height: 470px;
   }
   #console-view p {
-    padding: 1.25rem 1.75rem 1rem;
+    padding: 1.25rem 1.75rem 0.75rem;
+  }
+  .console-link {
+    padding: 0.65rem 0;
   }
   .console-divider {
     margin: 1rem auto;
