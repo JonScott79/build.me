@@ -116,6 +116,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -859,4 +860,34 @@ section {
 
 .current {
   background: #ffe6dd;
+}
+
+@media (max-height: 800px) {
+  .hero p {
+    margin: 1rem 0;
+  }
+  .logo img {
+    margin-bottom: 0.5rem;
+  }
+  .launchpad {
+    height: 500px;
+  }
+  .rocket {
+    width: min(300px, 80%);
+  }
+  .welcome-panel {
+    height: 440px;
+  }
+  .view-content {
+    max-height: 260px;
+  }
+  #console-view p {
+    padding: 1.25rem 1.75rem 1rem;
+  }
+  .console-divider {
+    margin: 1rem auto;
+  }
+  .console-launch {
+    margin: 0 1.75rem 1.25rem;
+  }
 }
