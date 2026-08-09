@@ -37,10 +37,12 @@ body {
 }
 
 @media (max-width: 960px), (max-height: 750px) {
-  html,
-  body {
+  html {
     overflow-y: auto;
     overflow-x: hidden;
+  }
+  body {
+    overflow: visible;
   }
 }
 
