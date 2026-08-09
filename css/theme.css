@@ -1,7 +1,14 @@
-/* ==========================================================
-   Build.me Design System
-   Atomic Age / Retro Futurism
-   ========================================================== */
+/*
+    theme.css
+
+    Global CSS custom properties, variables, and typography definitions.
+
+    Responsibilities
+
+    - Brand color palette
+    - Semantic theme variables
+    - Border radius, spacing, animations, typography configurations
+*/
 
 :root {
   /* ==========================
@@ -14,6 +21,7 @@
   --atomic-gold: #e2b84d;
   --deep-navy: #20303c;
   --soft-gray: #6d7b83;
+  --accent: var(--rocket-orange);
 
   /* ==========================
        Backgrounds
@@ -86,3 +94,13 @@
   --font-body: "Inter", sans-serif;
   --font-code: "JetBrains Mono", monospace;
 }
+
+/* ==========================================================
+   Accessibility Focus Outlines
+   ========================================================== */
+
+:focus-visible {
+  outline: 3px solid var(--retro-teal);
+  outline-offset: 4px;
+}
+

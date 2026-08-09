@@ -1,3 +1,14 @@
+<!--
+    index.html
+
+    Main landing page showcasing LANZAR custom design services, pricing, and active portfolio.
+
+    Responsibilities
+
+    - Metadata, canonical links, SEO tags, Open Graph and structured JSON-LD data
+    - Rocket animation and smoke visual components
+    - Interactive retro welcome panel console overlays
+-->
 <!doctype html>
 <html lang="en">
   <head>
@@ -57,29 +68,8 @@
 	<link rel="preload" href="assets/logos/rocket.svg" as="image">
 	<link rel="preload" href="assets/images/social-card.png" as="image">
 	
-	<!-- Clarity -->
-	<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xkhxzoeiol");
-	</script>
-	
-	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FF8KHGS931"></script>
-
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-
-		gtag("js", new Date());
-
-		gtag("config", "G-FF8KHGS931");
-	</script>
+	<!-- Centralized Analytics -->
+	<script src="js/analytics.js"></script>
 
 	<!-- JSON-LD/Structured Data -->
 	<script type="application/ld+json">
@@ -519,11 +509,8 @@
 				</div>
 
 				<div class="view-content">
+					<h2>Transparent Web Design Pricing</h2>
 					<p class="intro">
-						<h2>Transparent Web Design Pricing</h2>
-
-						<br>
-
 						Every project is custom, but these are our typical starting points.
 					</p>
 

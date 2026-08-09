@@ -1,129 +1,114 @@
-/*======================================================
-    LANZAR FUTURE INFORMATION TERMINAL
+/*
+    blog.js
 
-    Blog Transmission Controller
+    Blog transmission controller and layout manager.
 
-======================================================*/
+    Responsibilities
 
+    - Hash-based SPA routing
+    - Slide controls (previous, next, home)
+    - Browser history popstate sync
+*/
 
-/*======================================================
-    BLOG DATABASE
-======================================================*/
+// =====================================
+// Blog Database
+// =====================================
 
 const blogs = [
-    "blog/philosophy.html",
-    "blog/public-built.html",
-    "blog/origin.html",
-    "blog/digital-frontier.html",
-	"blog/catting-code.html",
+  "blog/philosophy.html",
+  "blog/public-built.html",
+  "blog/origin.html",
+  "blog/digital-frontier.html",
+  "blog/catting-code.html",
+  "blog/ninety-nine-login.html",
 ];
-
 
 let currentBlog = 0;
 
+// =====================================
+// Utility Functions
+// =====================================
 
-/*======================================================
-    INITIALIZE TERMINAL
-======================================================*/
-
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-
-        loadBlog();
-        setupControls();
-
-    }
-);
-
-
-/*======================================================
-    LOAD TRANSMISSION
-======================================================*/
-
-function loadBlog(){
-
-    const screen =
-        document.getElementById(
-            "blog-display"
-        );
-
-
-    if(!screen){
-
-        return;
-
-    }
-
-
-    screen.src =
-        blogs[currentBlog];
-
+function getSlug(path) {
+  return path.split("/").pop().replace(".html", "");
 }
 
+function syncStateFromHash() {
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const index = blogs.findIndex((path) => getSlug(path) === hash);
+    if (index !== -1) {
+      currentBlog = index;
+    }
+  } else {
+    currentBlog = 0;
+  }
+}
 
-/*======================================================
-    TERMINAL CONTROLS
-======================================================*/
+// =====================================
+// Initialization
+// =====================================
 
-function setupControls(){
+document.addEventListener("DOMContentLoaded", () => {
+  syncStateFromHash();
+  loadBlog();
+  setupControls();
 
-    const previous =
-        document.getElementById("previous");
+  // Listen for browser navigation changes (Back/Forward)
+  window.addEventListener("hashchange", () => {
+    syncStateFromHash();
+    loadBlog();
+  });
+});
 
-    const home =
-        document.getElementById("home");
+// =====================================
+// Load Transmission
+// =====================================
 
-    const next =
-        document.getElementById("next");
+function loadBlog() {
+  const screen = document.getElementById("blog-display");
 
+  if (!screen) {
+    return;
+  }
 
-    previous.addEventListener(
-        "click",
-        () => {
+  screen.src = blogs[currentBlog];
+}
 
-            currentBlog--;
+// =====================================
+// Terminal Controls
+// =====================================
 
-            if(currentBlog < 0){
+function setupControls() {
+  const previous = document.getElementById("previous");
 
-                currentBlog =
-                    blogs.length - 1;
+  const home = document.getElementById("home");
 
-            }
+  const next = document.getElementById("next");
 
-            loadBlog();
+  previous.addEventListener("click", () => {
+    currentBlog--;
 
-        }
-    );
+    if (currentBlog < 0) {
+      currentBlog = blogs.length - 1;
+    }
 
+    window.location.hash = getSlug(blogs[currentBlog]);
+  });
 
-    home.addEventListener(
-        "click",
-        () => {
+  home.addEventListener("click", () => {
+    currentBlog = 0;
 
-            currentBlog = 0;
+    window.location.hash = getSlug(blogs[currentBlog]);
+  });
 
-            loadBlog();
+  next.addEventListener("click", () => {
+    currentBlog++;
 
-        }
-    );
+    if (currentBlog >= blogs.length) {
+      currentBlog = 0;
+    }
 
-
-    next.addEventListener(
-        "click",
-        () => {
-
-            currentBlog++;
-
-            if(currentBlog >= blogs.length){
-
-                currentBlog = 0;
-
-            }
-
-            loadBlog();
-
-        }
-    );
-
+    window.location.hash = getSlug(blogs[currentBlog]);
+  });
 }

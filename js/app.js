@@ -1,23 +1,30 @@
-/*============================================================
-    LANZAR
+/*
+    app.js
 
-    File: app.js
-============================================================*/
+    Main application entry point.
+
+    Responsibilities
+
+    - Launch animation triggers
+    - Dashboard view swapping
+    - Close panel key listeners
+    - Booking event integration
+*/
 
 console.log("🚀 LANZAR Initialized");
 
-/*============================================================
-    Launch Animation
-============================================================*/
+// =====================================
+// Launch Animation
+// =====================================
 
 const rocket = document.querySelector(".rocket");
 const smoke = document.querySelector("#smoke");
 const launchButton = document.querySelector("#launch-mission");
 const welcome = document.querySelector("#welcome-panel");
 
-/*============================================================
-    Views
-============================================================*/
+// =====================================
+// Views
+// =====================================
 
 const consoleView = document.querySelector("#console-view");
 const meetView = document.querySelector("#meet-view");
@@ -26,9 +33,9 @@ const portfolioView = document.querySelector("#portfolio-view");
 const pricingView = document.querySelector("#pricing-view");
 const contactView = document.querySelector("#contact-view");
 
-/*============================================================
-    Menu Buttons
-============================================================*/
+// =====================================
+// Menu Buttons
+// =====================================
 
 const btnMeetJon = document.querySelector("#btn-meet-jon");
 const btnServices = document.querySelector("#btn-services");
@@ -38,9 +45,9 @@ const btnContact = document.querySelector("#btn-contact");
 const btnBooking = document.querySelector("#btn-booking");
 const btnJournal = document.querySelector("#btn-journal");
 
-/*============================================================
-    View Helpers
-============================================================*/
+// =====================================
+// View Helpers
+// =====================================
 
 function showView(view) {
   [
@@ -59,9 +66,9 @@ function returnToConsole() {
   showView(consoleView);
 }
 
-/*============================================================
-    Launch
-============================================================*/
+// =====================================
+// Launch Action
+// =====================================
 
 launchButton.addEventListener("click", () => {
   launchButton.disabled = true;
@@ -77,9 +84,9 @@ launchButton.addEventListener("click", () => {
   }, 900);
 });
 
-/*============================================================
-    Console Menu
-============================================================*/
+// =====================================
+// Console Menu
+// =====================================
 
 btnMeetJon.addEventListener("click", () => showView(meetView));
 
@@ -91,19 +98,15 @@ btnPricing.addEventListener("click", () => showView(pricingView));
 
 btnContact.addEventListener("click", () => showView(contactView));
 
-btnPricing.addEventListener("click", () => showView(pricingView));
-
 btnJournal.addEventListener("click", () => {
 
     window.location.href = "blog.html";
 
 });
 
-btnContact.addEventListener("click", () => showView(contactView));
-
-/*============================================================
-    Panel Close Buttons
-============================================================*/
+// =====================================
+// Panel Close Buttons
+// =====================================
 
 document.querySelectorAll(".panel-close").forEach((button) => {
   button.addEventListener("click", returnToConsole);
@@ -115,9 +118,9 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-/*============================================================
-    Booking
-============================================================*/
+// =====================================
+// Booking
+// =====================================
 
 btnBooking.addEventListener("click", () => {
   window.open(

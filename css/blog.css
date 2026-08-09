@@ -1,7 +1,15 @@
-/* ==========================================================
-   LANZAR FUTURE INFORMATION TERMINAL
-   Atomic Age / Retro Futurism
-   ========================================================== */
+/*
+    blog.css
+
+    Stylesheet for the blog page layout and terminal dashboard.
+
+    Responsibilities
+
+    - Terminal base window layout positioning
+    - Billboard layout sizing and absolute positioning inside the viewport
+    - Sliding controls, return buttons, and title layouts
+    - Responsive mobile layout query overrides
+*/
 
 
 /* ==========================================================
@@ -366,4 +374,96 @@ body {
     color:var(--deep-navy);
 
 }
+
+/* ==========================================================
+   MOBILE RESPONSIVENESS
+   ========================================================== */
+
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .terminal-header {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 15px;
+        text-align: center;
+        background: rgba(247, 242, 232, 0.9);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .terminal-logo img {
+        width: 160px;
+        margin: 0 auto;
+    }
+
+    .terminal-tagline {
+        margin: 5px 0;
+    }
+
+    .terminal-return {
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .future-terminal {
+        height: auto;
+        min-height: calc(100vh - 180px);
+        align-items: flex-start;
+        padding: 20px 15px 40px;
+    }
+
+    .terminal-scene {
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .journal-billboard {
+        width: 100%;
+        max-width: 100%;
+        background: #fdfaf4;
+        border: 2px solid rgba(42, 114, 143, 0.15);
+        border-radius: var(--radius-md);
+        padding: 15px;
+        box-shadow: var(--shadow-medium);
+    }
+
+    .journal-billboard > img {
+        display: none;
+    }
+
+    .terminal-screen {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: 380px;
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(42, 114, 143, 0.1);
+        background: #fffdf8;
+    }
+
+    .terminal-controls {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .terminal-controls button {
+        flex: 1;
+        max-width: 120px;
+        padding: 10px 15px;
+        font-size: 0.75rem;
+    }
+}
+
 

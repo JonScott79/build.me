@@ -1,8 +1,15 @@
-/*============================================================
-    LANZAR
+/*
+    main.css
 
-    File: main.css
-============================================================*/
+    Primary site stylesheet containing layout, styles, and dashboard components.
+
+    Responsibilities
+
+    - Reset and basic base element style configurations
+    - Grid and flexbox layout structures (hero grid, landing columns)
+    - Interactive panels, close buttons, led blinking indicators
+    - Responsive media queries and utility wrappers
+*/
 
 @import url("theme.css");
 
