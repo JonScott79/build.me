@@ -124,6 +124,17 @@ a {
   align-items: center;
 }
 
+.logo a {
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.logo a:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
 .logo img {
   width: clamp(380px, 30vw, 540px);
   margin-bottom: 1rem;
