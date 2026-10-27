@@ -21,17 +21,18 @@
             <stop offset="100%" stop-color="#E2B84D"/>
         </linearGradient>
 
-        <!-- Orbit Glow Gradient -->
+        <!-- Orbit Glow Gradient (Optimized for light background) -->
         <linearGradient id="orbitGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#2A728F" stop-opacity="0.3"/>
-            <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="#2A728F" stop-opacity="0.3"/>
+            <stop offset="0%" stop-color="#2A728F" stop-opacity="0.4"/>
+            <stop offset="50%" stop-color="#1E607A" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#2A728F" stop-opacity="0.4"/>
         </linearGradient>
 
-        <!-- Wordmark Gradient -->
-        <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#FFFFFF"/>
-            <stop offset="100%" stop-color="#E0F2FE"/>
+        <!-- Wordmark Gradient: High-Contrast Deep Navy/Teal Blue -->
+        <linearGradient id="textGradBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#102A43"/>
+            <stop offset="60%" stop-color="#1B495C"/>
+            <stop offset="100%" stop-color="#235D75"/>
         </linearGradient>
 
         <!-- Glow Filter -->
@@ -65,18 +66,18 @@
         stroke="#2A728F"
         stroke-width="1.5"
         stroke-dasharray="14 8 28 8"
-        opacity="0.55"
+        opacity="0.65"
         transform="rotate(-8 450 122)" />
 
     <!-- Gold Sparkle Stars -->
     <g transform="translate(165 75) scale(0.9)" filter="url(#glowFilter)">
-        <polygon points="0,-10 2.5,-2.5 10,0 2.5,2.5 0,10 -2.5,2.5 -10,0 -2.5,-2.5" fill="#E2B84D" />
+        <polygon points="0,-10 2.5,-2.5 10,0 2.5,2.5 0,10 -2.5,2.5 -10,0 -2.5,-2.5" fill="#D97706" />
     </g>
     <g transform="translate(710 155) scale(0.65)">
-        <polygon points="0,-10 2.5,-2.5 10,0 2.5,2.5 0,10 -2.5,2.5 -10,0 -2.5,-2.5" fill="#FFE587" />
+        <polygon points="0,-10 2.5,-2.5 10,0 2.5,2.5 0,10 -2.5,2.5 -10,0 -2.5,-2.5" fill="#F59E0B" />
     </g>
     <g transform="translate(820 68) scale(0.8)">
-        <polygon points="0,-10 2.5,-2.5 10,0 2.5,2.5 0,10 -2.5,2.5 -10,0 -2.5,-2.5" fill="#E2B84D" />
+        <polygon points="0,-10 2.5,-2.5 10,0 2.5,2.5 0,10 -2.5,2.5 -10,0 -2.5,-2.5" fill="#D97706" />
     </g>
 
     <!-- Destination Planet (Rocket Orange) -->
@@ -115,7 +116,7 @@
         <circle cx="97" cy="74" r="3" fill="#38BDF8" opacity=".8"/>
     </g>
 
-    <!-- Wordmark LANZAR -->
+    <!-- Wordmark LANZAR (Deep Blue Text) -->
     <g transform="skewX(-14)">
         <text
             x="210"
@@ -123,12 +124,11 @@
             font-family="'Space Grotesk', -apple-system, sans-serif"
             font-size="86"
             font-weight="800"
-            fill="url(#textGrad)"
+            fill="url(#textGradBlue)"
             letter-spacing="-3">
             LANZAR
         </text>
     </g>
-    
 
     <!-- Accent Beam Line -->
     <line
@@ -139,7 +139,7 @@
         stroke="#2A728F"
         stroke-width="2.5"
         opacity="0.9" />
-    <circle cx="200" cy="164" r="3.5" fill="#38BDF8"/>
+    <circle cx="200" cy="164" r="3.5" fill="#2A728F"/>
     <circle cx="745" cy="164" r="3.5" fill="#F46B45"/>
 
     <!-- Tagline -->
@@ -151,22 +151,21 @@
         font-size="20.5"
         font-weight="600"
         letter-spacing="2.2"
-        fill="#F46B45">
+        fill="#E05638">
         Web Design &#x2022; Development &#x2022; Digital Solutions
     </text>
 
-    
-    <!-- Subtitle -->
+    <!-- Subtitle (Slate Navy for light backgrounds) -->
     <text
         x="450"
         y="226"
         text-anchor="middle"
         font-family="'Plus Jakarta Sans', system-ui, sans-serif"
         font-size="11.5"
-        font-weight="500"
+        font-weight="600"
         letter-spacing="3"
-        fill="#94A3B8"
-        opacity="0.8">
-        MODERN WEB SYSTEMS &AMP; CLOUD APPLICATIONS
+        fill="#334E68"
+        opacity="0.9">
+        MODERN WEB SYSTEMS &amp; CLOUD APPLICATIONS
     </text>
 </svg>
