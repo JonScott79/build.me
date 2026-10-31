@@ -124,3 +124,21 @@ btnBooking.addEventListener("click", () => {
     "_blank"
   );
 });
+
+// =====================================
+// Deep-Link Hash Routing
+// =====================================
+const hashMap = {
+  "#meet": meetView,
+  "#services": servicesView,
+  "#portfolio": portfolioView,
+  "#pricing": pricingView,
+  "#contact": contactView,
+};
+if (window.location.hash && hashMap[window.location.hash]) {
+  launchButton.disabled = true;
+  rocket.classList.add("launch");
+  smoke.classList.add("show");
+  welcome.classList.add("show");
+  showView(hashMap[window.location.hash]);
+}
