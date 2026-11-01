@@ -120,7 +120,7 @@ document.addEventListener("keydown", (e) => {
 
 btnBooking.addEventListener("click", () => {
   window.open(
-    "https://lanzar.zohobookings.com/lanzar/#/lanzar",
+    "https://calendly.com/jonny-scott79/web-design-consultation",
     "_blank"
   );
 });
